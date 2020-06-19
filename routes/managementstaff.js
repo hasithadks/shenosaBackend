@@ -81,8 +81,8 @@ router.route('/add').post(upload.single('profilePic'),(req ,res) =>{
                         Dont share these credentials with anyone. \n\n
                         username : ${username} \n 
                         password : ${password} \n\n
-                        Please use your credentials to Login from here- http://localhost:3000/admin \n
-                        To Visit Online Shopping store- http://localhost:3000/home \n
+                        Please use your credentials to Login from here- https://senosafrontend.herokuapp.com/admin \n
+                        To Visit Online Shopping store- https://senosafrontend.herokuapp.com/home \n
                         Thanks,
                         Online Fashion Store Team.    
                     `;
@@ -142,8 +142,8 @@ router.route('/update/:id').post(upload.single('profilePic'),(req , res) =>{
                         Dont share these credentials with anyone. \n\n
                         username : ${managementstaff.username} \n 
                         password : ${managementstaff.password} \n\n
-                        Please use your credentials to Login from here- http://localhost:3000/admin \n
-                        To Visit Online Shopping store- http://localhost:3000/home \n
+                        Please use your credentials to Login from here- https://senosafrontend.herokuapp.com/admin \n
+                        To Visit Online Shopping store- https://senosafrontend.herokuapp.com/home \n
                         Thanks,
                         Online Fashion Store Team.    
                     `;

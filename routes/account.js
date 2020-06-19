@@ -187,10 +187,10 @@ router.route('/forgot/:email').get(async (req, res) => {
                         You forgot your password.\n\n
                         username : ${userEmail} \n 
                         Please use this link to reset the password\n
-                        Here is your reset link: http://localhost:3000/ResetPassword \n
+                        Here is your reset link: https://senosafrontend.herokuapp.com/ResetPassword \n
                         
-                        Please use your credentials to Login from here- http://localhost:3000/login \n
-                        To Visit Online Shopping store- http://localhost:3000/home \n
+                        Please use your credentials to Login from here- https://senosafrontend.herokuapp.com/login \n
+                        To Visit Online Shopping store- https://senosafrontend.herokuapp.com/home \n
                         Thanks,
                         Online Fashion Store Team.    
                     `;
@@ -248,8 +248,8 @@ router.route('/reset/:email').put(async function(req, res)  {
                         You Successfully Reset your password.\n\n
                         username : ${userEmail} \n 
                         password: ${userNewPassword}
-                        Please use your credentials to Login from here- http://localhost:3000/login \n
-                        To Visit Online Shopping store- http://localhost:3000/home \n
+                        Please use your credentials to Login from here- https://senosafrontend.herokuapp.com/login \n
+                        To Visit Online Shopping store- https://senosafrontend.herokuapp.com/home \n
                         Thanks,
                         Online Fashion Store Team.    
                     `;

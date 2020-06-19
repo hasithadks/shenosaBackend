@@ -64,8 +64,8 @@ router.route('/add').post(async (req,res) =>{
         const content = `
                         Hey ${user_username},\n
                         You are successfully registered to Online Fashion Store.\n\n
-                        Please use your credentials to Login from here- http://localhost:3000/login \n
-                        To Visit Online Shopping store- http://localhost:3000/home \n
+                        Please use your credentials to Login from here- https://senosafrontend.herokuapp.com/login \n
+                        To Visit Online Shopping store- https://senosafrontend.herokuapp.com/home \n
                         Thanks,
                         Online Fashion Store Team.    
                     `;
