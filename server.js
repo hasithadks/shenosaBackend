@@ -51,6 +51,6 @@ app.listen(port, () => {
     console.log(`Server is running on Port: ${port}`);
 });
 
-app.get('/*', (req, res) => {
+app.get('/  ', (req, res) => {
     res.send("Backend Service");
 });
