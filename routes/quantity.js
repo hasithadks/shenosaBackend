@@ -139,38 +139,50 @@ quantityRouter.route('/:id').get(function (req, res)  {
 
 
 
-quantityRouter.route('/').post (function(req, res) {
-   // console.log(req.file);
-  //  console.log('storage: ' + this.storage);
-    const quantity = new Quantity({
-        _id: new mongoose.Types.ObjectId(),
-        item_id : req.body.item_id,
-        item_size: req.body.item_size,
-        item_colour: req.body.item_colour,
-        item_quantity: req.body.item_quantity,
-        // item_productImage: req.file.path
-        //  item_productImage: filename
-    });
+// quantityRouter.route('/').post (function(req, res) {
+//    // console.log(req.file);
+//   //  console.log('storage: ' + this.storage);
+//     const quantity = new Quantity({
+//         _id: new mongoose.Types.ObjectId(),
+//         item_id : req.body.item_id,
+//         item_size: req.body.item_size,
+//         item_colour: req.body.item_colour,
+//         item_quantity: req.body.item_quantity,
+//         // item_productImage: req.file.path
+//         //  item_productImage: filename
+//     });
+//
+//     quantity.save().then(result => {
+//         console.log(result);
+//         res.status(201).json({
+//             message: "Created product successfully",
+//             createdProduct: {
+//                 item_size: result.item_size,
+//                 item_colour: result.item_colour,
+//                 item_quantity : result.item_quantity,
+//                 id: result.id,
+//                 request: {
+//                     type: 'GET',
+//                     url: 'http://localhost:5000/quantity/qty/' + result._id
+//                 }
+//             }
+//         });
+//     }).catch(err => {
+//         console.log(err);
+//         res.status(500).json({ error: err });
+//     });
+// });
 
-    quantity.save().then(result => {
-        console.log(result);
-        res.status(201).json({
-            message: "Created product successfully",
-            createdProduct: {
-                item_size: result.item_size,
-                item_colour: result.item_colour,
-                item_quantity : result.item_quantity,
-                id: result.id,
-                request: {
-                    type: 'GET',
-                    url: 'http://localhost:5000/quantity/qty/' + result._id
-                }
-            }
+
+quantityRouter.route('/').post(function(req, res) {
+    let quantity = new Quantity(req.body);
+    quantity.save()
+        .then(product => {
+            res.status(200).json({'item': 'Quantity added successfully'});
+        })
+        .catch(err => {
+            res.status(400).send('adding new Quantity failed');
         });
-    }).catch(err => {
-        console.log(err);
-        res.status(500).json({ error: err });
-    });
 });
 
 
