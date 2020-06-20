@@ -110,7 +110,7 @@ quantityRouter.route('/').get(function (req, res)  {
                     return {
                         name: doc.name,
                         price: doc.price,
-                        productImage: doc.productImage,
+                        //productImage: doc.productImage,
                         _id: doc.id,
                         request: {
                             type: 'GET',
@@ -139,9 +139,9 @@ quantityRouter.route('/:id').get(function (req, res)  {
 
 
 
-quantityRouter.post('/', upload.single('productImage'), (req, res) => {
-    console.log(req.file);
-    console.log('storage: ' + this.storage);
+quantityRouter.route('/').post (function(req, res) {
+   // console.log(req.file);
+  //  console.log('storage: ' + this.storage);
     const quantity = new Quantity({
         _id: new mongoose.Types.ObjectId(),
         item_id : req.body.item_id,
@@ -149,7 +149,7 @@ quantityRouter.post('/', upload.single('productImage'), (req, res) => {
         item_colour: req.body.item_colour,
         item_quantity: req.body.item_quantity,
         // item_productImage: req.file.path
-        item_productImage: filename
+        //  item_productImage: filename
     });
 
     quantity.save().then(result => {

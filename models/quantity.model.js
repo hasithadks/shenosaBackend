@@ -14,9 +14,9 @@ let Quantity = new Schema({
     item_quantity:{
         type: Number
     },
-    item_productImage: {
-        type: String
-    }
+    // item_productImage: {
+    //     type: String
+    // }
 });
 
 module.exports = mongoose.model('Quantity',Quantity);
