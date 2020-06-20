@@ -13,7 +13,7 @@ let Quantity = new Schema({
     },
     item_quantity:{
         type: Number
-    },
+    }
     // item_productImage: {
     //     type: String
     // }
