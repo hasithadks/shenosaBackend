@@ -174,7 +174,7 @@ quantityRouter.route('/:id').get(function (req, res)  {
 // });
 
 
-quantityRouter.route('/add').post(function(req, res) {
+quantityRouter.route('/').post(function(req, res) {
     let quantity = new Quantity(req.body);
     quantity.save()
         .then(product => {
